@@ -17,6 +17,8 @@
     ================================================== -->
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/aurora.css">
+    <link rel="stylesheet" href="css/background-boxes.css">
 
     <!-- favicons
     ================================================== -->
@@ -29,6 +31,7 @@
 
 
 <body id="top">
+    
     
     <!-- preloader
     ================================================== -->
@@ -84,6 +87,9 @@
         <!-- # intro
         ================================================== -->
         <section id="intro" class="container s-intro target-section">
+            <div class="aurora-wrap" aria-hidden="true">
+            <div class="aurora-sheet"></div>
+            </div>
 
             <div class="grid-block s-intro__content">
 
@@ -95,11 +101,13 @@
                     </h1>
                 </div> <!-- end intro-header -->
 
-                <figure class="intro-pic-primary">
+
+                <!-- Pic to the right of the title text -->
+                <!-- <figure class="intro-pic-primary">
                     <img src="images/intro-pic-primary.jpg" 
                          srcset="images/intro-pic-primary.jpg 1x, 
                          images/intro-pic-primary@2x.jpg 2x" alt="">  
-                </figure> <!-- end intro-pic-primary -->    
+                </figure> end intro-pic-primary     -->
                     
                 <div class="intro-block-content">
 
@@ -606,6 +614,23 @@
 
         </section> <!-- end s-testimonials --> 
 
+
+
+
+
+
+        <section id="bg-boxes" aria-label="Background Boxes">
+  <div class="boxes" aria-hidden="true"></div>
+
+  <div class="content">
+    <h2>Pixel Perfect Creativity</h2>
+    <!-- <p>Framer Motion is the best animation library, ngl.</p> -->
+  </div>
+
+  <div class="edge-mask" aria-hidden="true"></div>
+</section>
+
+
         
         <!-- # footer 
         ================================================== -->
@@ -723,6 +748,7 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/background-boxes.js" defer></script>
 
 </body>
 </html>
