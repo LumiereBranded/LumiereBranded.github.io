@@ -1,0 +1,233 @@
+/* Glassy contact form styling */
+.contact-form.glassy {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+/* Ambient blurred color orbs */
+.contact-form.glassy::before,
+.contact-form.glassy::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.35;
+  z-index: 0;
+}
+.contact-form.glassy::before {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle at center, var(--purple), transparent 70%);
+  top: -60px;
+  left: -80px;
+}
+.contact-form.glassy::after {
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle at center, var(--blue), transparent 70%);
+  bottom: -60px;
+  right: -60px;
+}
+
+/* extra color balls for vibrance */
+.contact-form.glassy .orb {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.25;
+  z-index: 0;
+}
+.contact-form.glassy .orb.one {
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle at center, var(--pink), transparent 70%);
+  top: 30%;
+  left: -90px;
+}
+.contact-form.glassy .orb.two {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at center, var(--green), transparent 70%);
+  bottom: 10%;
+  right: 40%;
+}
+
+/* Inputs and textarea */
+.contact-form.glassy input,
+.contact-form.glassy textarea {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  text-align: left;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  letter-spacing: 1px;
+}
+
+.contact-form.glassy input::placeholder,
+.contact-form.glassy textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.contact-form.glassy input:focus,
+.contact-form.glassy textarea:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.contact-form.glassy textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Rainbow animated button */
+:root {
+  --m: 1.4rem;
+  --red: #FF6565;
+  --pink: #FF64F9;
+  --purple: #6B5FFF;
+  --blue: #4D8AFF;
+  --green: #5BFF89;
+  --yellow: #FFEE55;
+  --orange: #FF6D1B;
+}
+
+.contact-form.glassy  {
+  position: relative;
+  z-index: 2;
+  float: right;
+  border: calc(0.08 * var(--m)) solid transparent;
+  color: #f3f3f3;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  border-radius: calc(0.7 * var(--m));
+  padding: calc(0.5 * var(--m)) calc(1 * var(--m));
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background:
+    linear-gradient(rgba(18,18,19,0.9), rgba(18,18,19,0.9)),
+    linear-gradient(#121213 50%, rgba(18,18,19,0.6) 80%, rgba(18,18,19,0)),
+    linear-gradient(90deg, var(--orange), var(--yellow), var(--green),
+                    var(--blue), var(--purple), var(--pink), var(--red));
+  background-origin: border-box;
+  background-clip: padding-box, border-box, border-box;
+  background-size: 200%;
+  animation: rainbow-shift 2s infinite linear;
+  opacity: 0.9; /* 90% opaque — clean luminous look */
+}
+
+.send {
+  z-index: 2;
+  float: right;
+  border: calc(0.08 * var(--m)) solid transparent;
+  color: #f3f3f3;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  border-radius: calc(0.7 * var(--m));
+  padding: calc(0.5 * var(--m)) calc(1 * var(--m));
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background:
+    linear-gradient(rgba(18,18,19,0.9), rgba(18,18,19,0.9)),
+    linear-gradient(#121213 50%, rgba(18,18,19,0.6) 80%, rgba(18,18,19,0)),
+    linear-gradient(90deg, var(--orange), var(--yellow), var(--green),
+                    var(--blue), var(--purple), var(--pink), var(--red));
+  background-origin: border-box;
+  background-clip: padding-box, border-box, border-box;
+  background-size: 200%;
+  animation: rainbow-shift 2s infinite linear;
+  opacity: 0.9; /* 90% opaque — clean luminous look */
+}
+
+.sendButton {
+    width: 140px;position: relative;
+  z-index: 2;
+  float: right;
+    color: #f3f3f3;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  border-radius: calc(0.7 * var(--m));
+  padding: calc(0.5 * var(--m)) calc(1 * var(--m));
+  cursor: pointer;
+  background:
+    linear-gradient(rgba(147, 147, 165, 0.9), rgba(79, 79, 102, 0.9)),
+    linear-gradient(#121213 50%, rgba(18,18,19,0.6) 80%, rgba(18,18,19,0)),
+    linear-gradient(90deg, var(--orange), var(--yellow), var(--green),
+                    var(--blue), var(--purple), var(--pink), var(--red));
+}
+
+.contact-form.glassy .send::before {
+  content: '';
+  background: linear-gradient(90deg, var(--orange), var(--yellow), var(--green),
+                              var(--blue), var(--purple), var(--pink), var(--red));
+  height: 50%;
+  width: 70%;
+  position: absolute;
+  bottom: -25%;
+  z-index: -1;
+  background-size: 200%;
+  animation: rainbow-shift 2s infinite linear;
+  filter: blur(calc(0.8 * var(--m)));
+}
+
+.contact-form.glassy .send:hover,
+.contact-form.glassy .send:hover::before {
+  animation: rainbow-shift 0.7s infinite linear;
+  transform: translateY(-2px);
+}
+
+@keyframes rainbow-shift {
+  0% { background-position: 0; }
+  100% { background-position: 200%; }
+}
+
+/* Success message */
+.success-message {
+  display: none;
+  color: #ffffff;
+  font-size: 1rem;
+  margin-top: 1.2rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease;
+  clear: both;
+  text-align: center;
+}
+
+.success-message.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Prevent Chrome autofill from turning inputs white */
+.contact-form.glassy input:-webkit-autofill,
+.contact-form.glassy textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.07) inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s; /* prevents flash */
+}
+
+.contact-form.glassy input:-webkit-autofill:focus,
+.contact-form.glassy textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
