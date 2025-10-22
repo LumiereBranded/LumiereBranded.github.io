@@ -808,7 +808,7 @@ table {
 /* --------------------------------------------------------------------
  * ## large devices (1001px to 1200px)
  * -------------------------------------------------------------------- */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1800px) {
     .container {
         width: min(100%, var(--width-grid-max));
     }
