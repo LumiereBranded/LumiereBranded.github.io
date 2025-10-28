@@ -3,7 +3,7 @@
 /* Ensure the intro is exactly one screen tall and can host absolutely-positioned children */
 #intro.s-intro {
   position: relative;
-  min-height: 100vh;   /* covers the initial viewport */
+  min-height: 85vh;   /* covers the initial viewport */
   overflow: hidden;    /* keep the glow inside */
   isolation: isolate;  /* correct blending with other effects */
 }
@@ -111,4 +111,13 @@
 @keyframes aurora {
   from { background-position: 50% 50%, 50% 50%; }
   to   { background-position: 350% 50%, 350% 50%; }
+}
+
+
+
+
+@media screen and (max-width: 440px) {
+    .mobileGroupStart {
+      margin-top: 20px;
+    }
 }

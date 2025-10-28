@@ -1566,7 +1566,7 @@ h5,
 .h5,
 h6,
 .h6 {
-    margin-top   : var(--vspace-1_75);
+    margin-top   : var(--vspace-1);
     margin-bottom: var(--vspace-0_5);
 }
 
@@ -3210,7 +3210,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 .s-header {
     --header-height : 7.2rem;
-    --logo-width    : 10.8rem;
+    --logo-width    : 3.5rem;
 
     z-index         : 100;
     background-color: transparent;
@@ -3553,12 +3553,6 @@ td:last-child {
     }
 }
 
-@media screen and (max-width: 400px) {
-    .s-header {
-        --logo-width: 9.8rem;
-    }
-}
-
 
 /* ===================================================================
  * # INTRO
@@ -3571,7 +3565,7 @@ td:last-child {
     --content-min-height    : calc(var(--vspace-1) * 27);
 
     z-index                 : 2;
-    height                  : max(var(--content-min-height), 100vh);
+    /* height                  : max(var(--content-min-height), 100vh); */
     overflow                : hidden;
     position                : relative;
 }
@@ -3625,7 +3619,7 @@ td:last-child {
 }
 
 .intro-header__big-type {
-    font-size  : clamp(var(--text-display), var(--text-3xl) + 10vw, 18.4rem);
+    font-size  : clamp(var(--text-display), var(--text-3xl) + 10vw, 13.4rem);
     line-height: 1;
     margin-top : 0;
 }
@@ -3959,7 +3953,7 @@ td:last-child {
 
 @media screen and (max-width: 500px) {
     .s-intro {
-        --content-padding-top: max(12.8rem, 12vh);
+        --content-padding-top: max(13rem, 12vh);
     }
 
     .intro-pic-primary {
@@ -4000,7 +3994,13 @@ td:last-child {
  *
  * ------------------------------------------------------------------- */
 .s-about {
-    padding-top: var(--vspace-5);
+    padding-top: var(--vspace-2);
+}
+
+@media screen and (max-width: 800px) {
+    .s-about {
+    padding-top: 0;
+}
 }
 
 .s-about__content {
@@ -4033,7 +4033,7 @@ td:last-child {
     object-fit        : cover;
     -o-object-position: center;
     object-position   : center;
-    aspect-ratio      : 2000/2000;
+    aspect-ratio      : 5/3;
 }
 
 /* ------------------------------------------------------------------- 
@@ -4083,9 +4083,14 @@ td:last-child {
  *
  * ------------------------------------------------------------------- */
 .s-menu {
-    padding-top: var(--vspace-5);
+    padding-top: var(--vspace-2);
 }
 
+@media screen and (max-width: 800px) {
+    .s-menu {
+    padding-top: 0;
+}
+}
 .s-menu__content {
     justify-content: space-between;
     align-items    : flex-start;
@@ -4095,7 +4100,6 @@ td:last-child {
 .s-menu__content-start {
     position     : sticky;
     top          : var(--vspace-5);
-    margin-bottom: var(--vspace-2);
 }
 
 .s-menu__content-end {
@@ -4151,15 +4155,6 @@ td:last-child {
     padding-bottom: var(--vspace-0_75);
     padding-left  : var(--vspace-0_75);
     padding-right : var(--vspace-0_75);
-}
-
-.tab-nav__list a::before {
-    display          : block;
-    content          : counter(ctr, decimal-leading-zero) ".";
-    font-size        : var(--text-xs);
-    margin-right     : var(--vspace-0_625);
-    color            : var(--color-text-light);
-    counter-increment: ctr;
 }
 
 .tab-nav__list a svg {
@@ -4227,7 +4222,7 @@ td:last-child {
 }
 
 .menu-block__group {
-    margin-bottom: var(--vspace-3);
+    margin-bottom: var(--vspace-1);
 }
 
 .menu-block__cat-name {
@@ -4380,7 +4375,13 @@ td:last-child {
  *
  * ------------------------------------------------------------------- */
 .s-gallery {
-    padding-top: var(--vspace-5);
+    padding-top: var(--vspace-2);
+}
+
+@media screen and (max-width: 800px) {
+    .s-gallery {
+    padding-top: 0;
+    }
 }
 
 /* ------------------------------------------------------------------- 
@@ -4624,8 +4625,8 @@ td:last-child {
  *
  * ------------------------------------------------------------------- */
 .s-footer {
-    --bottom-padding   : var(--vspace-2_5);
-    --footer-logo-width: 16rem;
+    --bottom-padding   : var(--vspace-1);
+    --footer-logo-width: 6rem;
     
     padding-bottom     : var(--bottom-padding);
 }
@@ -4665,7 +4666,7 @@ td:last-child {
 .s-footer__logo img {
     width         : var(--footer-logo-width);
     margin        : 0;
-    vertical-align: bottom;
+    /* vertical-align: bottom; */
 }
 
 .s-footer__top {
@@ -4685,6 +4686,8 @@ td:last-child {
 }
 
 .s-footer__bottom {
+    display: flex !important;
+    flex-direction: column !important;
     font-size  : var(--text-sm);
     padding-top: var(--vspace-1);
     margin-top : var(--vspace-1_5);
@@ -4692,15 +4695,17 @@ td:last-child {
     position   : relative;
 }
 
-.s-footer__bottom::before {
-    content         : "";
-    display         : block;
-    height          : 1px;
-    width           : calc(100% - 2 * var(--gutter));
-    background-color: rgba(255, 255, 255, 0.05);
-    position        : absolute;
-    top             : 0;
-    left            : var(--gutter);
+.footerLogo {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.noMargin {
+    margin-bottom: 0 !important;
+}
+
+.topMargin {
+    margin-top: 34px !important;
 }
 
 .s-footer__social svg {
@@ -4856,11 +4861,11 @@ td:last-child {
     z-index         : 2;
     display         : flex;
     align-items     : center;
-    position        : absolute;
+    position        : relative;
     transform       : rotate(-90deg);
-    transform-origin: left bottom;
-    bottom          : calc(var(--bottom-padding) - var(--vspace-0_5));
-    right           : calc(var(--gutter) + var(--vspace-0_75) - var(--width-label) - var(--vspace-1_75) - var(--vspace-0_75));
+    margin-left: auto;
+    margin-top: 5rem;
+    margin-right: 1.5rem;
 }
 
 .ss-go-top span {
@@ -4883,7 +4888,7 @@ td:last-child {
     border         : none;
     height         : var(--vspace-1_75);
     width          : var(--vspace-1_75);
-    border-radius  : 50%;
+    border-radius  : 80%;
     border         : 1px solid var(--color-white);
     margin-right   : var(--vspace-0_75);
     position       : relative;
@@ -4896,6 +4901,11 @@ td:last-child {
 
 .ss-go-top svg path {
     fill: var(--color-white);
+}
+
+.flexRow {
+    display: flex !important;
+    flex-direction: row !important;
 }
 
 /* ------------------------------------------------------------------- 
