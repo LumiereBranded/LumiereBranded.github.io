@@ -206,7 +206,7 @@
                     },
                     // when window width is > 800px
                     801: {
-                        slidesPerView: 2,
+                        slidesPerView: 3,
                         spaceBetween: 44
                     },
                     // when window width is > 1200px
