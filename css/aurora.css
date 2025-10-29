@@ -3,7 +3,7 @@
 /* Ensure the intro is exactly one screen tall and can host absolutely-positioned children */
 #intro.s-intro {
   position: relative;
-  min-height: 85vh;   /* covers the initial viewport */
+  min-height: 90vh;   /* covers the initial viewport */
   overflow: hidden;    /* keep the glow inside */
   isolation: isolate;  /* correct blending with other effects */
 }
@@ -119,6 +119,21 @@
 @media screen and (max-width: 440px) {
     .mobileGroupStart {
       margin-top: 20px;
+    }
+    
+    #intro .aurora-sheet {
+      
+      animation: aurora 40s linear infinite;
+       opacity: 0.7;
+      /* background-size: 300% 100%, 200% 100%;
+      background-position: 50% 50%, 50% 50%;
+      filter: invert(1) blur(10px);
+      opacity: 0.5;
+      will-change: transform, background-position, filter;
+
+      /* soft mask that focuses the light near the top-right */
+      -webkit-mask-image: radial-gradient(ellipse at 100% 0%, #000 10%, transparent 70%);
+          mask-image: radial-gradient(ellipse at 100% 0%, #000 10%, transparent 70%); 
     }
 }
 /* Make the aurora intro fill the full viewport height on desktop */
