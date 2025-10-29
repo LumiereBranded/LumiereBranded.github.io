@@ -3618,6 +3618,8 @@ td:last-child {
     left            : calc((var(--overline-hline) + var(--gutter)) * -1);
 }
 
+
+/* adjust font height adjust intro height adjust lumiere branded scaling */
 .intro-header__big-type {
     font-size  : clamp(var(--text-display), var(--text-3xl) + 10vw, 13.4rem);
     line-height: 1;
@@ -4908,6 +4910,55 @@ td:last-child {
     flex-direction: row !important;
 }
 
+html, body { overflow-x: hidden; }
+@media screen and (min-width: 420px) {
+/* Restore balanced spacing for the hero text */
+#intro .s-intro__content {
+  padding-right: 30vw; /* or a fixed value like 80px */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  z-index: 2;
+}
+
+.s-footer__top {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-block.footer-newsletter {
+  flex: 0 0 120%; /* 20% larger but still centered */
+  max-width: 900px;
+}
+
+}/* 1) Always center the contact block column, regardless of grid math */
+.s-footer__top .footer-block.footer-newsletter {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70rem; /* cap so it doesn't get too wide; adjust as you like */
+  width: 100%;
+  margin-top: 10rem;
+}
+
+/* 2) Grow the whole block ~20% without breaking layout width */
+@media (min-width: 640px) {
+  .s-footer__top .footer-block.footer-newsletter {
+    transform: scale(1.3);
+    transform-origin: center center;  /* keeps it centered while scaling */
+  }
+}
+
+/* 3) Ensure its parent line-up doesn't push it off-center at certain breakpoints */
+.s-footer__top {
+  display: flex;
+  justify-content: center;  /* centers children horizontally */
+  flex-wrap: wrap;          /* avoids odd pushes when other columns wrap */
+  gap: var(--vspace-1, 1rem);
+}
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * footer
@@ -4991,9 +5042,14 @@ td:last-child {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 440px) {
     .footer-newsletter h5 {
         font-size  : var(--text-sm);
         line-height: var(--vspace-0_75);
+    }
+
+    /* 1) Always center the contact block column, regardless of grid math */
+    .s-footer__top .footer-block.footer-newsletter {
+    margin-top: 0;
     }
 }
