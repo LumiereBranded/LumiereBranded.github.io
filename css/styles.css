@@ -3618,8 +3618,10 @@ td:last-child {
     left            : calc((var(--overline-hline) + var(--gutter)) * -1);
 }
 
+
+/* adjust font height adjust intro height adjust lumiere branded scaling */
 .intro-header__big-type {
-    font-size  : clamp(var(--text-display), var(--text-3xl) + 10vw, 13.4rem);
+    font-size  : clamp(var(--text-display), var(--text-3xl) + 10vw, 18.4rem);
     line-height: 1;
     margin-top : 0;
 }
@@ -4999,3 +5001,27 @@ td:last-child {
 }
 
 html, body { overflow-x: hidden; }
+@media screen and (min-width: 420px) {
+/* Restore balanced spacing for the hero text */
+#intro .s-intro__content {
+  padding-right: 30vw; /* or a fixed value like 80px */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  z-index: 2;
+}
+
+.s-footer__top {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-block.footer-newsletter {
+  flex: 0 0 120%; /* 20% larger but still centered */
+  max-width: 900px;
+}
+
+}

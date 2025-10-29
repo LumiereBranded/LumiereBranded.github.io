@@ -121,7 +121,8 @@
       margin-top: 20px;
     }
 }
-
+/* Make the aurora intro fill the full viewport height on desktop */
+@media (min-width: 440px) {
 /* Make aurora fill full viewport width regardless of container */
 #intro {
   position: relative;
@@ -150,6 +151,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+}
 
 
 /* Make the aurora intro fill the full viewport height on desktop */
@@ -172,12 +174,12 @@
   }
 }
 /* === Aurora full-screen hero fix (no horizontal scroll) === */
-
+@media (max-width: 440px) {
 #intro {
   position: relative;
+  width: 100%;
   min-height: 100vh;
   overflow: hidden; /* contain glow & prevent side scroll */
-}
 
 /* Aurora background wrapper — full screen */
 #intro .aurora-wrap {
@@ -208,3 +210,5 @@ body {
   overflow-x: visible; /* allows normal page flow */
 }
 
+}
+}
