@@ -4997,3 +4997,5 @@ td:last-child {
         line-height: var(--vspace-0_75);
     }
 }
+
+html, body { overflow-x: hidden; }
