@@ -3621,7 +3621,7 @@ td:last-child {
 
 /* adjust font height adjust intro height adjust lumiere branded scaling */
 .intro-header__big-type {
-    font-size  : clamp(var(--text-display), var(--text-3xl) + 10vw, 18.4rem);
+    font-size  : clamp(var(--text-display), var(--text-3xl) + 10vw, 13.4rem);
     line-height: 1;
     margin-top : 0;
 }
