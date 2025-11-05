@@ -98,13 +98,7 @@
   #intro .aurora-sheet,
   #intro .aurora-sheet::after {
     background-image: var(--scanline-dark), var(--aurora);
-  }
-  #intro .aurora-sheet { filter: blur(10px); } /* no invert in dark */
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  #intro .aurora-sheet::after { animation: none; }
+  } /* no invert in dark */
 }
 
 /* Sweep animation (matches the Aceternity vibe) */
@@ -124,7 +118,7 @@
       
       animation: aurora 40s linear infinite;
        opacity: 0.5;
-      filter: blur(4px);
+      filter:invert(1) blur(4px);
       -webkit-mask-image: radial-gradient(ellipse at 100% 0%, #000 10%, transparent 70%);
           mask-image: radial-gradient(ellipse at 100% 0%, #000 10%, transparent 70%); 
     }
