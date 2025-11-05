@@ -122,8 +122,8 @@
     
     #intro .aurora-sheet {
       
-      animation: aurora 30s linear infinite;
-       opacity: 0.7;
+      animation: aurora 40s linear infinite;
+       opacity: 0.5;
       filter: blur(4px);
       -webkit-mask-image: radial-gradient(ellipse at 100% 0%, #000 10%, transparent 70%);
           mask-image: radial-gradient(ellipse at 100% 0%, #000 10%, transparent 70%); 
