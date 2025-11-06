@@ -41,21 +41,22 @@
   /* Gradient recipes */
   --aurora: repeating-linear-gradient(
     100deg,
-    var(--blue-500) 10%,
-    var(--indigo-300) 15%,
-    var(--blue-300) 20%,
+    var(--blue-500) 15%,
+    var(--indigo-300) 20%,
+    var(--blue-300) 25%,
     var(--violet-200) 25%,
-    var(--blue-400) 30%
+    var(--blue-400) 35%
   );
   --scanline-light: repeating-linear-gradient(
     100deg,
     var(--white) 0%,
-    var(--white) 7%,
-    var(--transparent) 10%,
+    var(--white) 9%,
     var(--transparent) 12%,
-    var(--white) 16%
+    var(--transparent) 15%,
+    var(--white) 19%
   );
-  --scanline-dark: repeating-linear-gradient(
+
+  --scanline-light: repeating-linear-gradient(
     100deg,
     var(--black) 0%,
     var(--black) 7%,
@@ -73,7 +74,7 @@
   background-size: 300% 100%, 200% 100%;
   background-position: 50% 50%, 50% 50%;
   filter: invert(1) blur(10px);
-  opacity: 0.5;
+  opacity: 0.3;
   will-change: transform, background-position, filter;
 
   /* soft mask that focuses the light near the top-right */
@@ -105,7 +106,7 @@
 @media screen and (max-width: 440px) {
   #intro .aurora-sheet,
   #intro .aurora-sheet::after {
-    background-image: var(--scanline-dark), var(--aurora);
+    background-image: var(--scanline-light), var(--aurora);
   }
   #intro .aurora-sheet { filter: blur(10px); } /* no invert in dark */
     .mobileGroupStart {
@@ -115,7 +116,7 @@
     #intro .aurora-sheet {
       
       animation: aurora 40s linear infinite;
-       opacity:0.5;
+       opacity:0.4;
       filter: blur(6px);
       -webkit-mask-image: radial-gradient(ellipse at 100% 0%, #000 10%, transparent 70%);
           mask-image: radial-gradient(ellipse at 100% 0%, #000 10%, transparent 70%); 
@@ -123,10 +124,15 @@
 }
 /* Make the aurora intro fill the full viewport height on desktop */
 @media (min-width: 440px) {
+  #intro .aurora-sheet,
+  #intro .aurora-sheet::after {
+    background-image: var(--scanline-light), var(--aurora);
+  }
+  #intro .aurora-sheet { filter: blur(6px); } /* no invert in dark */
 /* Make aurora fill full viewport width regardless of container */
 #intro {
   position: relative;
-  width: 100vw;        /* take full viewport width */
+  width: 100%;        /* take full viewport width */
   left: 50%;
   right: 50%;
   margin-left: -50vw;  /* escape any container limits */
