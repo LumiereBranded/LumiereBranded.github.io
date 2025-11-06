@@ -4963,7 +4963,7 @@ html, body { overflow-x: hidden; }
  * responsive:
  * footer
  * ------------------------------------------------------------------- */
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 2600px) {
     .ss-go-top {
         bottom: calc(var(--bottom-padding) - var(--vspace-0_25));
         right : var(--vspace-0_125);
