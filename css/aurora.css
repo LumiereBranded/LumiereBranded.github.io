@@ -135,7 +135,7 @@
   width: 100%;        /* take full viewport width */
   left: 50%;
   right: 50%;
-  margin-left: -50vw;  /* escape any container limits */
+  margin-left: -45vw;  /* escape any container limits */
   margin-right: -50vw;
   overflow: hidden;
 }
